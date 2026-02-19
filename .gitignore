@@ -7,3 +7,6 @@ node_modules/
 
 # Log du projet -> utile pour la suite
 *.log
+
+# Fichiers personnel
+brouillon

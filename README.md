@@ -43,20 +43,20 @@ Des événements dédiés aux compétitions de divers jeux vidéos sont organis�
 ## Organisation du Projet
 
 ### Front-End
-- `HTML/`, `CSS/`, `JS/`, `IMAGES/` → Dossiers et fichiers du front-end
-- `index.js` → Script principal du front-end 
-- `gestion_connexion_accueil.js` → Script de gestion de la connexion générale côté front
+- `HTML/`, `CSS/`, `JS/`, `IMAGES/` → Dossiers et fichiers du front-end.
+- `index.js` → Script principal du front-end.
+- `gestion_connexion_accueil.js` → Script de gestion de la connexion générale côté front.
 
 ### Back-End
-- `Back-End/` → Routes et connexion à la base de données (`db.js`)
-- `Back-End/Routes/` → Gestion des routes et requêtes (`utilisateurs.js`)
+- `Back-End/` → Routes et connexion à la base de données (`db.js`).
+- `Back-End/Routes/` → Gestion des routes et requêtes (`utilisateurs.js`).
 
 ### Base de données
-- `SQL/` → script de création de la base de données (`mabase.sql`)
-- `.env` → variables sensibles (ignorées par Git via `.gitignore`)
+- `SQL/` → Script de création de la base de données (`mabase.sql`).
+- `.env` → Variables sensibles (ignorées par Git via `.gitignore`).
 
 ### Autres
-- `README.md` → fichier de documentation du projet
+- `README.md` → Fichier de documentation du projet.
 
 ---
 
@@ -97,8 +97,9 @@ Importer le fichier SQL/connexion.sql pour créer les tables et relations.
 
 ```bash
 node index.js
+
 ```
-Le serveur est accessible sur http://127.0.0.1:3000
+Le serveur est accessible sur http://127.0.0.1:3000.
 
 ---
 

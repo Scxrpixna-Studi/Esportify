@@ -31,7 +31,6 @@ app.use(session({
 
 
 // Dossier public : tous les fichiers statiques
-const path = require("path");
 app.use(express.static(path.join(__dirname, "Front-End"))); 
 
 // Pour l'accessibilité depuis la racine

@@ -34,18 +34,19 @@ app.use(session({
 app.use(express.static(path.join(__dirname, "HTML")));
 
 
-app.use("/users", usersRoutes);
+app.use("/users", usersRoutes)
 
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.url}`);
   next();
 });
 
-const PORT = process.env.PORT || 3000; // process.env.PORT existe sur alwaysdata
+const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, "::", () => {
-  console.log(`API lancée sur le port ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`API lancée sur ${PORT}`);
 });
+
 
 // Toutes les 5 minutes, supprime les utilisateurs non vérifiés depuis plus de 5 minutes
 setInterval(() => {

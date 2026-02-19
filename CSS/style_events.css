@@ -1,0 +1,292 @@
+
+
+            .events {
+                width: 80%;
+                height: auto;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+
+                gap: 10px;
+            }
+
+            article {
+                
+                width: 25%;
+
+                border-radius: 10px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                margin: 0 30px 30px 30px;
+                padding: 0;
+
+            }
+
+            .fondArticles {
+                width: 100%;
+                height: auto;
+                background-color: rgba(0, 0, 0, 0.5);
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                border-radius: 10px;
+                
+                padding: 10px;
+            }
+
+            .imgFond, .imgJeuFond {
+                width: 100%;
+                height: 95px;
+                background-image: url(../IMAGES/fond_event_vide.png);
+                background-size: cover;
+
+                border-radius: 10px;
+
+            }
+
+            .fondNoir {
+                width: 100%;
+                height: 95px;
+                background-color: rgba(0, 0, 0, 0.5);
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 10px;
+                
+                gap: 10px;
+                
+                z-index: 1;
+            }
+
+            .logoEsport, .logoJeu {
+                width: 40px;
+                height: 40px;
+
+                border-radius: 100%;
+                box-shadow: 0 0 10px rgb(178, 178, 178);
+            }
+
+            .paraJeu {
+                font-family: 'inter', sans-serif;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            #titreSansEvents {
+                font-size: 18px;
+                z-index: 1;
+
+                margin-bottom: 30px;
+            }
+
+
+            .overflowArticle {
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                border: 0.2px solid transparent;
+                border-radius: 0px 0px 10px 10px;
+                margin: 0;
+            }
+
+            .overflowArticle::before {
+                content: "";
+                position: absolute;
+                width: 300px;
+                height: 300px;
+                background: radial-gradient(circle, var(--halo-color, rgba(188,129,255,0.6)), transparent 70%);
+                filter: blur(100px);
+                opacity: 0;
+                pointer-events: none;
+                transform: translate(-50%, -50%);
+                transition: opacity 0.3s ease;
+
+                z-index: 0;
+
+            }
+
+            .overflowArticle:hover {
+                
+                border-top: none;
+                border-right: 0.2px solid var(--halo-color, rgba(188,129,255));
+                border-bottom: 0.2px solid var(--halo-color, rgba(188,129,255));
+                border-left: 0.2px solid var(--halo-color, rgba(188,129,255));
+            }
+
+            .overflowArticle:hover::before {
+                opacity: 1;
+            }
+
+            .overflowArticle::before {
+                left: var(--x);
+                top: var(--y);
+            }
+
+            .titreEvent {
+                font-family: 'inter', sans-serif;
+                font-size: 16px;
+                font-weight: lighter;
+
+                margin-top: 20px;
+                margin-bottom: 10px;
+                z-index: 1;
+
+            }
+
+            .desc {
+                width: 90%;
+                height: auto;
+
+                font-family: 'Kanit', sans-serif;
+                font-size: 12px;
+                text-align: center;
+
+                margin-bottom: 30px;
+                
+                z-index: 1;
+            }
+
+            .boiteHoraire, .boiteRecompense, .boiteParticipantMin {
+                width: 100%;
+                height: auto;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+
+                margin-left: 30px;
+                margin-right: 30px;
+                gap: 20px;
+                
+                font-family: 'inter', sans-serif;
+                font-weight: 500;
+                font-size: 12px;
+
+                margin-bottom: 15px;
+                
+                z-index: 1;
+
+            }
+
+            .imgCalendrier, .imgRecompense, .imgJoueur {
+                width: 5%;
+                height: 5%;
+
+                margin-left: 40px;
+                
+                z-index: 1;
+            }
+
+            .footerArticle {
+                width: 90%;
+                height: auto;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items:flex-end;
+                
+                padding: 0 20px 20px 20px;
+                
+                z-index: 1;
+
+            }
+
+            .boitePropos {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 5px;
+                
+                z-index: 1;
+            }
+
+            .organisateur {
+                font-family: 'inter', sans-serif;
+                font-size: 10px;
+                
+                z-index: 1;
+            }
+
+            .participant {
+                margin-top: 50px;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                font-family: 'inter', sans-serif;
+                font-size: 10px;
+
+                gap: 20px;
+                
+                z-index: 1;
+            }
+
+            .imgParticipant {
+                width: 20px;
+                height: 20px;
+                
+                z-index: 1;
+            }
+
+            .boiteBtn, .boiteBtnInscription, .boiteBtnValide {
+                width: 60%;
+                height: auto;
+                background-color: rgba(0, 0, 0, 0.3);
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 0 0 10px 10px;
+            }
+
+            .btnInscrire, .btnStatut, .creer {
+                background: none;
+                border: none;
+
+                color: var(--halo-color, rgb(167, 255, 177));
+                font-family: 'inter', sans-serif;
+                font-weight: 200;
+                font-size: 12px;
+
+                padding: 15px;
+
+                text-shadow: 0 4px 4px rgba(0, 0, 0);
+            }
+
+            .boiteBtn:hover, .boiteBtnInscription:hover, .boiteBtnValide:hover {
+                background-color: var(--halo-color, rgba(188,129,255,0.6));
+            }
+
+            .boiteBtn:hover .btnInscrire, .boiteBtnInscription:hover .btnInscrire, .boiteBtnValide:hover .btnStatut, .boiteBtn:hover .creer {
+                color: rgba(0, 0, 0);
+                font-weight: 500;
+                
+                text-shadow: 0 4px 4px var(--halo-color, rgba(188,129,255,0.6));
+            }

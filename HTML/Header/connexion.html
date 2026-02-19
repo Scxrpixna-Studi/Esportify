@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Connexion Esportify</title>
+        <link rel="icon" type="image/png" href="../../IMAGES/logo.png"> <!-- Icon -->
+
+
+        <!-- Fichiers CSS -->
+         <link rel="stylesheet" href="../../CSS/formulaire_co.css">
+
+        <!-- Fichiers Js -->
+         <script src="../../JS/formulaire_connexion.js" defer></script>
+
+        <!-- Polices d'écritures -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+            <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Michroma&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+
+    </head>
+
+
+    <body>
+
+        <header>
+
+            <div id="boiteLogo">
+                <img id="logoHeader" src="../../IMAGES/logo.png" alt="logo">
+                <p>ESPORTIFY</p>
+            </div>
+
+            <div id="boiteLiens">
+                <a href="./../Header/nous_contacter.html"><img class="imgHeader" id="mail" src="../../IMAGES/Icons_site/e-mail.png" alt="nous-contacter"></a>
+                <a class="liensHeader" id="eventsLien" href="./../Header/events.html">Évènements</a>
+                <a class="liensHeader" id="commuLien" href="./../Header/commu.html">Communauté</a>
+                <a href="./../accueil.html"><img class="imgHeader" id="profil" src="../../IMAGES/Icons_site/maison.png" alt="Accueil"></a>
+            </div>
+
+        </header>
+
+        <hr>
+
+        <menu>
+
+            <div id="fondMenu">
+
+                <div id="formulaireCo">
+
+                    <div id="fondNoir">
+                        <img id="pdp" src="../../IMAGES/Icons_site/profil.png" alt="pdp">
+                        <div id="boiteCoIn">
+                            <button id="paraCo" class="active from-left" type="button">Connexion</button>
+                            <button id="paraInscription" type="button">Inscription</button>
+
+                        </div>
+
+                        <p id="paraPrincipalCo">Complétez le formulaire si vous souhaitez vous connecter</p>
+
+                        <p id="paraPrincipalIn" style="display: none;">Complétez le formulaire si vous souhaitez vous inscrire</p>
+
+                        <form id="formulaireConnexion" action="/submit" method="post">
+                            
+                            <div id="boiteFormulaireConnexion">
+                                <div id="boitePseudo" class="champsForm" style="display: none;">
+                                    <label for="pseudo">Pseudo</label>
+                                    <input type="text" id="pseudo" name="pseudo" placeholder="Votre pseudo">
+                                </div>
+
+                                <div id="boiteMail" class="champsForm">
+                                    <label for="email">E-Mail</label>
+                                    <input type="email" id="email" name="email" placeholder="votreMail@gmail.com">
+                                </div>
+
+                                <div id="boiteMdp" class="champsForm">
+                                    <label for="password">Mot de passe</label>
+                                    <input type="password" id="mdp" name="mdp" placeholder="votre mot de passe">
+                                    <img id="oeilMdp" src="../../IMAGES/Icons_site/Oeil fermé.png">
+                                </div>
+                            </div>
+
+                            <a id="mdpOublie" href=""><i>Mot de passe oublié ?</i></a>
+
+                            <button id="btnCo">Connexion</button>
+                            <button id="btnIn" style="display: none">s'inscrire</button>
+
+                            <div id="fondNoirA" style="display: none;">
+                                <div id="alerte">
+                                        <img id="imgAlerte" src="../../IMAGES/logo.png">
+                                        <h2 id="titreAlerte">Inscription à Esportify</h2>
+                                        <p id="paraAlerte"></p>
+                                        <button id="btnAlerte" type="button">Compris !</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </menu>
+
+        <footer>
+
+            <div id="boiteLogoF">
+                <img id="logoFooter" src="../../IMAGES/logo.png">
+                <h1 id="esportFooter">ESPORTIFY</p>
+            </div>
+
+            <div id="boiteLiensF">
+                <div id="liensSitesF">
+                    <a class="liensPrincipauxF" href="./../Header/events.html">Évènements</a>
+                    <a class="liensPrincipauxF" href="./../Footer/galerie.html">Galerie</a>
+                    <a class="liensPrincipauxF" href="./../Header/commu.html">Communauté</a>
+                    <a class="liensPrincipauxF" href="./../Header/nous_contacter.html">Nous Contacter</a>
+                </div>
+
+                <div id="confidentialité">
+                    <a class="liensConfidentialiteF" href="./../Footer/condition_utilisateur.html">Conditions Utilisateurs</a>
+                    <a class="liensConfidentialiteF" href="./../Footer/cgu.html">CGU</a>
+                    <a class="liensConfidentialiteF" href="./../Footer/cgv.html">CGV</a>
+                    <a class="liensConfidentialiteF" href="./../Footer/mentions_legales.html">Mentions Légales</a>
+                </div>
+            </div>
+
+            <div id="profilF">
+                <img id="pdpF" src="../../IMAGES/Icons_site/profil.png" alt="profil">
+                <a id="connexionF" href="./../Header/connexion.html">S'inscrire / Se connecter</a>
+            </div>
+
+        </footer>
+   
+    </body>
+</html>

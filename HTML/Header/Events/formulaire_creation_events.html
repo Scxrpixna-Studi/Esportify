@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Création Événement Esportify</title>
+        <link rel="icon" type="image/png" href="../../../IMAGES/logo.png"> <!-- Icon -->
+
+
+        <!-- Fichiers CSS -->
+        
+            <link rel="stylesheet" href="../../../CSS/Header/Events/formulaire_creation_events.css">
+
+
+        <!-- Fichiers Js -->
+ 
+            <script src="../../../JS/Header/filtre_events.js" defer></script>
+            <script src="/gestion_connexion_accueil.js" defer></script>
+            <script src="../../../JS/Header/Events/formulaire_crea_events.js" defer></script> 
+
+
+        <!-- Polices d'écritures -->
+
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+            <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Michroma&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+
+
+    </head>
+
+
+    <body>
+
+        <header>
+
+            <div id="boiteLogo">
+                <img id="logoHeader" src="../../../IMAGES/logo.png" alt="logo">
+                <p>ESPORTIFY</p>
+            </div>
+
+            <div id="boiteLiens">
+                <a href="./../../Header/nous_contacter.html"><img class="imgHeader" id="contact" src="../../../IMAGES/Icons_site/e-mail.png" alt="Email"></a>
+                <a class="liensHeader" id="events" href="./../../Header/events.html">Événement</a>
+                <a class="liensHeader" id="commuLien" href="./../../Header/commu.html">Communauté</a>
+                <a id="lienProfil" class="liensConnexion" href="./../../Header/connexion.html"><img class="imgHeader" id="profil" src="../../../IMAGES/Icons_site/profil.png" alt="profil"></a>
+            </div>
+
+            <div class="profil-container" id="profilContainer" style="display: none;"></div>
+
+        </header>
+
+        <hr>
+
+        <menu>
+
+            <div id="boiteFormulaire">
+
+                <form id="formulaireCreationEvents">
+                    <input type="hidden" name="jeu" id="jeuSelectionne">
+
+
+                    <div id="boiteIntro">
+                        <img id="logoEsportify" src="../../../IMAGES/logo.png">
+                        <h1 id="titreFormulaire">Formulaire de Création</h1>
+                        <p id="introFormulaire">Vous souhaitez créer un événement ? Remplissez le formulaire ci-dessous : votre demande sera ensuite transmise aux organisateurs d’Esportify pour validation.</p>
+                    </div>
+
+                    <legend>Informations Générales Obligatoires</legend>
+                    <div class="infoObligatoire">
+
+                            <div class="boiteInput" id="boiteFiltre">
+
+                                <div  id="filtreJeu" class="filtre">
+                                    <p>Jeu concerné</p>
+                                    <img id="fleche" src="../../../IMAGES/Icons_site/flèche.png">
+                                </div>
+
+                                <div class="optionsFiltre">
+                                    <div class="optionFiltre" data-value="Call of Duty : Warzone"><img class="logoJeuFiltre" src="../../../IMAGES/Icons_site/logo_cod_warzone.png">Call of Duty : Warzone</div>
+                                    <div class="optionFiltre" data-value="Counter Strike 2"><img class="logoJeuFiltre" src="../../../IMAGES/Icons_site/logo_counter.png">Counter Strike 2</div>
+                                    <div class="optionFiltre" data-value="League Of Legends"><img class="logoJeuFiltre" src="../../../IMAGES/logo_lol.png">League Of Legends</div>
+                                    <div class="optionFiltre" data-value="Rocket League"><img class="logoJeuFiltre" src="../../../IMAGES/rl.jpg">Rocket League</div>
+                                    <div class="optionFiltre" data-value="Valorant"><img class="logoJeuFiltre" src="../../../IMAGES/Icons_site/logo valorant.png">Valorant</div>
+                                </div>
+
+                            </div>
+
+                            <div class="boiteInput">
+                                <input type="text" name="titre" id="titre" placeholder="Titre" required>
+                            </div>
+
+
+                            <div class="boiteInput" id="boiteDesc">
+                                <textarea name="description" id="description" rows="10" cols="50" placeholder="Décrivez en quelques mots votre événements..."  required></textarea>
+                            </div>
+
+                            <div class="boiteInput">
+                                <input type="number" name="participant" id="nbrParticipant" placeholder="Nombre de participant (minimum)" required>
+                            </div>
+
+
+                            <div class="boiteInput" id="boiteDebut">
+                                <label for="dateDebut">Début du tournoi :</label>
+                                <div id="horaireDebut">
+                                    <p>Le</p>
+                                    <input type="date" name="dateDebut" id="dateDebut" required>
+                                    <p>à</p>
+                                    <input type="time" name="heureDebut" id="heureDebut" required>
+                                </div>
+                            </div>
+
+
+                            <div class="boiteInput" id="boiteFin">
+                                <label for="dateFin">Fin du tournoi :</label>
+                                <div id="horaireFin">
+                                    <p>Le</p>
+                                    <input type="date" name="dateFin" id="dateFin" required>
+                                    <p>à</p>
+                                    <input type="time" name="heureFin" id="heureFin" required>
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <legend>Informations Complémentaires Facultatives</legend>
+                    <div class="infoFacultative">
+
+                            <div class="boiteInput">
+                                <input type="text" name="recompense" id="recompense" placeholder="Récompense (Aucune par défault)">
+                            </div>
+
+                    </div>
+
+                    <div class="boiteBtnEnvoyer">
+                        <button type="submit" id="btnEnvoyer">Envoyer la demande</button>
+                    </div>
+
+                    <div id="fondNoirA" style="display: none;">
+                        <div id="alerte">
+                                <img id="imgAlerte" src="../../IMAGES/logo.png">
+                                <h2 id="titreAlerte">Confirmation</h2>
+                                <p id="paraAlerte"></p>
+                                <button id="btnAlerte" type="button">Compris !</button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+
+
+        </menu>
+
+        <footer>
+
+            <div id="boiteLogoF">
+                <img id="logoFooter" src="../../../IMAGES/logo.png">
+                <h1 id="esportFooter">ESPORTIFY</p>
+            </div>
+
+            <div id="boiteLiensF">
+                <div id="liensSitesF">
+                    <a class="liensPrincipauxF" href="./../../Header/events.html">Événements</a>
+                    <a class="liensPrincipauxF" href="./../../Footer/galerie.html">Galerie</a>
+                    <a class="liensPrincipauxF" href="./../../Header/commu.html">Communauté</a>
+                    <a class="liensPrincipauxF" href="./../../Header/nous_contacter.html">Nous Contacter</a>
+                </div>
+
+                <div id="confidentialité">
+                    <a class="liensConfidentialiteF" href="./../../Footer/condition_utilisateur.html">Conditions Utilisateurs</a>
+                    <a class="liensConfidentialiteF" href="./../../Footer/cgu.html">CGU</a>
+                    <a class="liensConfidentialiteF" href="./../../Footer/cgv.html">CGV</a>
+                    <a class="liensConfidentialiteF" href="./../../Footer/mentions_legales.html">Mentions Légales</a>
+                </div>
+            </div>
+
+            <div id="profilF">
+                <img id="pdpF" src="../../../IMAGES/Icons_site/profil.png" alt="profil">
+                <a id="connexionF" href="./../../Header/connexion.html">S'inscrire / Se connecter</a>
+            </div>
+
+        </footer>
+   
+    </body>
+</html>

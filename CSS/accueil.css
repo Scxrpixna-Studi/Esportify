@@ -1,0 +1,474 @@
+ /* MENU */
+
+        menu {
+            width: 100%;
+            height: auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            margin: 0;
+            padding: 0;
+
+        }
+
+        /* PRESENTATION */
+
+            #presentation {
+                width: 100%;
+                height: auto;
+                background-color: rgba(0, 0, 0, 0.30);
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                font-family: 'inter', sans-serif;
+
+                padding: 50px 0 50px 0;
+                
+                position: relative;
+                z-index: 5; /* plus grand que les images */
+
+            }
+
+            #titreBienvenue {
+                font-weight: 400;
+            }
+
+            .paraBienvenue {
+                font-size: 18px;
+                font-weight: 200;
+                margin: 0;
+            }
+
+            .paraCo {
+                color: rgb(255, 0, 251);
+                font-weight: bold;
+                margin: 0;
+
+                text-decoration: none;
+            }
+
+            #paraFondation {
+                font-size: 15px;
+                font-weight: bold;
+            }
+
+        /* GALERIE */
+
+            #galerie {
+                width: 100%;
+                height: auto;
+
+                margin-bottom: 50px;
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                gap: 30px;
+            }
+
+
+            ul {
+                width: 100%;
+                height: auto;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-end;
+
+                padding: 20px 0 20px 0 ;
+                gap: 30px;
+
+                list-style: none;
+                position: relative;
+
+                overflow: hidden;
+            }
+
+
+            .imgGalerie {
+                width: 270px;
+                height: 270px;
+                border-radius: 100%;
+                box-shadow: 0 4px 10px 0 rgb(0, 0, 0);
+
+                transition: transform 0.3s;
+            }
+
+            /* Images Basiques de la galerie */
+
+                    .galerie li:nth-child(1) .imgGalerie {
+                    transform: translateY(-100px) scale(0.8);
+                    z-index: 1;
+                    }
+
+                    .galerie li:nth-child(2) .imgGalerie {
+                    transform: translateY(-30px) scale(0.9);
+                    z-index: 2;
+                    }
+
+                    .galerie li:nth-child(3) .imgGalerie {
+                    transform: translateY(0) scale(1);
+                    z-index: 3; /* image centrale devant toutes */
+                    }
+
+
+                    .galerie li:nth-child(4) .imgGalerie {
+                    transform: translateY(-30px) scale(0.9);
+                    z-index: 2;
+                    }
+
+                    .galerie li:nth-child(5) .imgGalerie {
+                    transform: translateY(-100px) scale(0.8);
+                    z-index: 1;
+                    } 
+
+
+                /* Survole des images de la galerie */
+
+                    .galerie li:nth-child(1) .imgGalerie:hover {
+                    transform: translateY(-120px) scale(0.85);
+                    z-index: 3; 
+                    }
+
+                    .galerie li:nth-child(2) .imgGalerie:hover {
+                    transform: translateY(-50px) scale(0.95);
+                    z-index: 3;
+                    }
+
+                    .galerie li:nth-child(3) .imgGalerie:hover {
+                    transform: translateY(-10px) scale(1.05);
+                    z-index: 4; 
+                    }
+
+                    .galerie li:nth-child(4) .imgGalerie:hover {
+                    transform: translateY(-50px) scale(0.95);
+                    z-index: 3;
+                    }
+
+                    .galerie li:nth-child(5) .imgGalerie:hover {
+                    transform: translateY(-120px) scale(0.85);
+                    z-index: 3;
+                    }
+
+
+
+            #boiteBtnGalerie {
+                width: 180px;
+                height: 60px;
+                background-color: none;
+
+                border-left: 0.2px solid rgb(255, 151, 243) ;
+                border-top: 0.2px solid rgb(255, 151, 243);
+                border-radius: 10px;
+                box-shadow: 0 4px 10px 0 rgb(0, 0, 0);
+
+                transition: transform 0.3s;
+            }
+
+            #btnGalerie {
+                width: 180px;
+                height: 60px;
+                background-color: rgb(0, 0, 0, 0.5);
+                color: white;
+
+                font-size: 16px;
+                font-family: 'Kanit', sans-serif;
+                font-weight: 300;
+
+                border-left: none ;
+                border-top: none;
+                border-right: 0.2px solid rgb(191, 0, 255);
+                border-bottom: 0.2px solid rgb(191, 0, 255);
+                border-radius: 10px;
+
+                transition: transform 0.3s;
+
+            }
+
+            #btnGalerie:hover {
+                background-color: rgb(0,0,0,0.6);
+                transform: translateY(-1px);
+                box-shadow: 0 5px 10px 0 rgb(0, 0, 0, 0.7);
+            }
+
+        
+        /* EVENEMENTS */
+
+            #titreEvents {
+                text-align: center;
+                font-size: 130px;
+                font-family: 'Kanit', sans-serif;
+                font-weight: bold;
+                text-shadow: 0 0 10px rgb(188, 129, 255);
+            }
+
+            #events {
+                width: 80%;
+                height: auto;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+
+                gap: 10px;
+            }
+
+            article {
+                
+                width: 30%;
+
+                border-radius: 10px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                margin: 0 30px 30px 30px;
+                padding: 0;
+
+            }
+
+            .fondArticles {
+                width: 100%;
+                height: auto;
+                background-color: rgba(0, 0, 0, 0.5);
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                border-radius: 10px;
+                
+                padding: 10px;
+            }
+
+            .imgFond, .imgJeuFond {
+                width: 100%;
+                height: 190px;
+                background-image: url(../IMAGES/fond_event_vide.png);
+                background-size: cover;
+
+                border-radius: 10px;
+
+            }
+
+            .fondNoir {
+                width: 100%;
+                height: 190px;
+                background-color: rgba(0, 0, 0, 0.5);
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 10px;
+                
+                gap: 10px;
+            }
+
+            .logoEsport, .logoJeu {
+                width: 80px;
+                height: 80px;
+
+                border-radius: 100%;
+                box-shadow: 0 0 10px rgb(178, 178, 178);
+            }
+
+            .paraJeu {
+                font-family: 'inter', sans-serif;
+                font-size: 22px;
+                font-weight: bold;
+            }
+
+            #titreSansEvents {
+                font-size: 18px;
+            }
+
+
+            .overflowArticle {
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                border: 0.2px solid transparent;
+                border-radius: 0px 0px 10px 10px;
+                margin: 0;
+            }
+
+            .overflowArticle::before {
+                content: "";
+                position: absolute;
+                width: 300px;
+                height: 300px;
+                background: radial-gradient(circle, var(--halo-color, rgba(188,129,255,0.6)), transparent 70%);
+                filter: blur(60px);
+                opacity: 0;
+                pointer-events: none;
+                transform: translate(-50%, -50%);
+                transition: opacity 0.3s ease;
+
+                z-index: -1;
+
+            }
+
+            .overflowArticle:hover {
+                
+                border-top: none;
+                border-right: 0.2px solid var(--halo-color, rgba(188,129,255));
+                border-bottom: 0.2px solid var(--halo-color, rgba(188,129,255));
+                border-left: 0.2px solid var(--halo-color, rgba(188,129,255));
+            }
+
+            .overflowArticle:hover::before {
+                opacity: 1;
+            }
+
+            .overflowArticle::before {
+                left: var(--x);
+                top: var(--y);
+            }
+
+            .titreEvent {
+                font-family: 'inter', sans-serif;
+                font-size: 20px;
+                font-weight: lighter;
+
+                margin-top: 20px;
+                margin-bottom: 10px;
+
+            }
+
+            .desc {
+                width: 90%;
+                height: auto;
+
+                font-family: 'Kanit', sans-serif;
+                font-size: 14px;
+                text-align: center;
+
+                margin-bottom: 30px;
+            }
+
+            .boiteHoraire, .boiteRecompense, .boiteParticipantMin {
+                width: 100%;
+                height: auto;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+
+                margin-left: 30px;
+                margin-right: 30px;
+                gap: 20px;
+                
+                font-family: 'inter', sans-serif;
+                font-weight: 500;
+                font-size: 14px;
+
+                margin-bottom: 15px;
+
+            }
+
+            .imgCalendrier, .imgRecompense, .imgJoueur {
+                width: 7%;
+                height: 7%;
+
+                margin-left: 40px;
+            }
+
+            .footerArticle {
+                width: 90%;
+                height: auto;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items:flex-end;
+                
+                padding: 0 20px 20px 20px;
+
+            }
+
+            .organisateur {
+                font-family: 'inter', sans-serif;
+                font-size: 12px;
+            }
+
+            .participant {
+                margin-top: 50px;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                font-family: 'inter', sans-serif;
+                font-size: 12px;
+
+                gap: 20px;
+            }
+
+            .imgParticipant {
+                width: 37px;
+                height: 37px;
+            }
+
+            .boiteBtn, .boiteBtnInscription {
+                width: 220px;
+                height: auto;
+                background-color: rgba(0, 0, 0, 0.3);
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 0 0 10px 10px;
+            }
+
+            .btnInscrire {
+                background: none;
+                border: none;
+
+                color: rgb(167, 255, 177);
+                font-family: 'inter', sans-serif;
+                font-weight: 200;
+                font-size: 14px;
+
+                padding: 15px;
+
+                text-shadow: 0 4px 4px rgba(0, 0, 0);
+            }
+
+            .boiteBtn:hover, .boiteBtnInscription:hover {
+                background-color: var(--halo-color, rgba(188,129,255,0.6));
+            }
+
+            .boiteBtn:hover .btnInscrire, .boiteBtnInscription:hover .btnInscrire {
+                color: rgba(0, 0, 0);
+                font-weight: 500;
+                
+                text-shadow: 0 4px 4px var(--halo-color, rgba(188,129,255,0.6));
+            }

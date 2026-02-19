@@ -1,0 +1,240 @@
+        <div id="galerie">
+
+                        <section>
+
+                            <ul class="galerie">
+
+                                <li>
+                                    <figure>
+                                        <img class="imgGalerie" src="../IMAGES/img1.png" alt="img1">
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure>
+                                        <img class="imgGalerie" src="../IMAGES/img2.png" alt="img2">
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure>
+                                        <img class="imgGalerie" src="../IMAGES/img3.png" alt="img3">
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure>
+                                        <img class="imgGalerie" src="../IMAGES/img4.png" alt="img4">
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure>
+                                        <img class="imgGalerie" src="../IMAGES/img5.png" alt="img5">
+                                    </figure>
+                                </li>
+
+                            </ul>
+                        </section>
+
+                        <div id="boiteBtnGalerie">
+                        <button id="btnGalerie">Voir la galerie</button>
+                        </div>
+
+        </div>
+
+        DELETE FROM utilisateurs
+WHERE role = "Joueur";
+
+
+
+
+<article>
+                    <div class="fondArticles">
+
+                        <div class="imgJeuFond" style=`background-image: url(../IMAGES/${fondJeu}.jpg);`>
+                            <div class="fondNoir">
+                                <img class="logoJeu" src=`../IMAGES/${logoJeu}.jpg` alt="logo rl">
+                                <p class="paraJeu">${jeu}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="overflowArticle" style="--halo-color: ${colorJeu}">
+
+                            <p class="titreEvent">${titre}</p>
+
+                                <div class="boiteDesc">
+                                    <p class="desc">${description}</p>
+                                </div>
+
+                                <div class="boiteHoraire">
+                                    <img class="imgCalendrier" src="../IMAGES/Icons_site/Calendrier.png" alt="calendrier">
+                                    <p class="info">Le ${dateDebut} à ${heureDebut}</p>
+                                </div>
+
+                                <div class="boiteRecompense">
+                                    <img class="imgRecompense" src="../IMAGES/Icons_site/Récompense.png" alt="récompense">
+                                    <p class="info">${recompense}</p>
+                                </div>
+
+                                <div class="boiteImage">
+                                    <p class="paraImg">Image transférer :</p>
+                                    <img class="img" src=`${img1}` alt="Aucune">
+                                    <img class="img" src=`${img2}` alt="Aucune">
+                                    <img class="img" src=`${img3}` alt="Aucune">
+                                </div>
+
+                                <div class="footerArticle">
+                                    <p class="organisateur"><em>Proposé par <strong>${pseudo.user}</strong></em></p>
+                                        <div class="participant">
+                                            <img class="imgParticipant" src="../IMAGES/Icons_site/perso gameur.png" alt="participants">
+                                            <p>${nbrParticipant}</p>
+                                        </div>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="boiteBtn" id="boiteValidationConf" style="--halo-color: ${colorJeu}">
+                        <button class="validation" id="valider">Valider</button>
+                    </div>
+                    <div class="boiteBtn" id="boiteValidationRefu" style="--halo-color: ${colorJeu}">
+                        <button class="validation" id="refuser">Refuser</button>
+                    </div>
+                            
+                </article>
+
+
+
+// article de base 
+
+<article>
+                    <div class="fondArticles">
+
+                        <div class="imgJeuFond" style="background-image: url(../IMAGES/fond_rl.jpg);">
+                            <div class="fondNoir">
+                                <img class="logoJeu" src="../IMAGES/rl.jpg" alt="logo rl">
+                                <p class="paraJeu">Rocket League</p>
+                            </div>
+                        </div>
+                        
+                        <div class="overflowArticle" style="--halo-color: rgba(51, 139, 212)">
+
+                            <p class="titreEvent">Tournois 3v3</p>
+
+                                <div class="boiteHoraire">
+                                    <img class="imgCalendrier" src="../IMAGES/Icons_site/Calendrier.png" alt="calendrier">
+                                    <p class="info">Le 11/11/2025 à 21h26</p>
+                                </div>
+
+                                <div class="boiteRecompense">
+                                    <img class="imgRecompense" src="../IMAGES/Icons_site/Récompense.png" alt="récompense">
+                                    <p class="info">Aucune pour le moment</p>
+                                </div>
+
+                                <div class="footerArticle">
+                                    <p class="organisateur"><em>Proposé par <strong>Scxrpixna</strong></em></p>
+                                        <div class="participant">
+                                            <img class="imgParticipant" src="../IMAGES/Icons_site/perso gameur.png" alt="participants">
+                                            <p>3</p>
+                                        </div>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="boiteBtn" id="boiteInscription" style="--halo-color: rgba(51, 139, 212)">
+                        <button class="inscription">S'inscrire</button>
+                    </div>
+
+                    <div class="boiteBtn" id="boiteInfo" style="--halo-color: rgba(51, 139, 212)">
+                        <button class="infoEvents" id="btnInfo">Plus d'infos</button>
+                    </div>
+                            
+                </article>
+
+                
+                <article>
+                    <div class="fondArticles">
+
+                        <div class="imgJeuFond" style="background-image: url(../IMAGES/fond_valo.webp);">
+                            <div class="fondNoir">
+                                <img class="logoJeu" src="../IMAGES/Icons_site/logo valorant.png" alt="logo valo">
+                                <p class="paraJeu">Valorant</p>
+                            </div>
+                        </div>
+                        
+                        <div class="overflowArticle" style="--halo-color: rgba(255, 70, 85)">
+
+                            <p class="titreEvent">Challengers 2026</p>
+
+                                <div class="boiteHoraire">
+                                    <img class="imgCalendrier" src="../IMAGES/Icons_site/Calendrier.png" alt="calendrier">
+                                    <p class="info">Le 11/11/2025 à 21h26</p>
+                                </div>
+
+                                <div class="boiteRecompense">
+                                    <img class="imgRecompense" src="../IMAGES/Icons_site/Récompense.png" alt="récompense">
+                                    <p class="info">Aucune pour le moment</p>
+                                </div>
+
+                                <div class="footerArticle">
+                                    <p class="organisateur"><em>Proposé par <strong>Arold-98</strong></em></p>
+                                        <div class="participant">
+                                            <img class="imgParticipant" src="../IMAGES/Icons_site/perso gameur.png" alt="participants">
+                                            <p>1</p>
+                                        </div>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="boiteBtn" id="boiteInscription" style="--halo-color: rgba(255, 70, 85)">
+                        <button class="inscription">S'inscrire</button>
+                    </div>
+
+                    <div class="boiteBtn" id="boiteInfo" style="--halo-color: rgba(255, 70, 85)">
+                        <button class="infoEvents">Plus d'infos</button>
+                    </div>
+                            
+                </article>
+
+                
+                <article>
+                    <div class="fondArticles">
+
+                        <div class="imgJeuFond" style="background-image: url(../IMAGES/fond_lol.jpg);">
+                            <div class="fondNoir">
+                                <img class="logoJeu" src="../IMAGES/logo_lol.png" alt="logo lol">
+                                <p class="paraJeu">League of Legends</p>
+                            </div>
+                        </div>
+                        
+                        <div class="overflowArticle" style="--halo-color: rgba(0, 255, 200)">
+
+                            <p class="titreEvent">Road of Legends</p>
+
+                                <div class="boiteHoraire">
+                                    <img class="imgCalendrier" src="../IMAGES/Icons_site/Calendrier.png" alt="calendrier">
+                                    <p class="info">Le 11/11/2025 à 21h26</p>
+                                </div>
+
+                                <div class="boiteRecompense">
+                                    <img class="imgRecompense" src="../IMAGES/Icons_site/Récompense.png" alt="récompense">
+                                    <p class="info">Aucune pour le moment</p>
+                                </div>
+
+                                <div class="footerArticle">
+                                    <p class="organisateur"><em>Proposé par <strong>lifeGold</strong></em></p>
+                                        <div class="participant">
+                                            <img class="imgParticipant" src="../IMAGES/Icons_site/perso gameur.png" alt="participants">
+                                            <p>128</p>
+                                        </div>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="boiteBtn" style="--halo-color: rgba(0, 255, 200)">
+                        <button class="inscription">S'inscrire</button>
+                    </div>
+
+                    <div class="boiteBtn" id="boiteInfo" style="--halo-color: rgba(0, 255, 200)">
+                        <button class="infoEvents">Plus d'infos</button>
+                    </div>
+                            
+                </article>
+                
+               

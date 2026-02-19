@@ -1,0 +1,9 @@
+# Fichiers Sensibles -> .env.* utile pour la suite en cas d'expansivité des fichiers
+.env
+.env.*
+
+# Dépendances Node
+node_modules/
+
+# Log du projet -> utile pour la suite
+*.log

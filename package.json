@@ -1,0 +1,25 @@
+{
+  "name": "esportify",
+  "version": "1.0.0",
+  "description": "Site E-Sport pour examen Studi",
+  "license": "ISC",
+  "author": "Scxrpixna",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.2",
+    "canvas": "^3.2.1",
+    "cors": "^2.8.6",
+    "crypto": "^1.0.1",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "mysql2": "^3.16.3",
+    "nodemailer": "^7.0.13",
+    "path": "^0.12.7"
+  }
+}

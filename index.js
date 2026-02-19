@@ -11,7 +11,7 @@ const db = require('./Back-End/db.js');
 
 const app = express(); // Crée l’application serveur
 app.use(cors({
-  origin: "http://127.0.0.1:5500", // ton port front
+  origin: true, 
   credentials: true
 }));
 
@@ -36,13 +36,15 @@ app.use(express.static(path.join(__dirname, "HTML")));
 
 app.use("/users", usersRoutes)
 
-app.listen(3000, () => {
-  console.log("API lancée sur http://127.0.0.1:3000");
-});
-
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.url}`);
   next();
+});
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log("API lancée sur ${PORT}");
 });
 
 

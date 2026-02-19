@@ -7,7 +7,7 @@
     host: process.env.ID_DB_HOST,
     user: process.env.ID_DB_USER,
     password: process.env.MDP_DB,
-    database: "pandora_esportify",
+    database: process.env.DB_NAME,
     port: 3306
     });
 

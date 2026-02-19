@@ -17,7 +17,7 @@ Une plateforme spécialement conçue pour les joueurs E-Sport les plus ambitieux
 
 Des événements dédiés aux compétitions de divers jeux vidéos sont organisés régulièrement, les joueurs ayant participé pourront alors suivre leurs performances tout au long de leurs expériences et échanger entre eux.
 
-[Connectez-vous](./Header/connexion.html) et inscrivez-vous pour le prochain événement.
+[Connectez-vous](./HTML/Header/connexion.html) et inscrivez-vous pour le prochain événement.
 
 *Esportify fondée le 17 mars 2021 en France*
 

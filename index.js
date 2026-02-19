@@ -8,8 +8,14 @@ require('dotenv').config();
 const usersRoutes = require('./Back-End/Routes/utilisateurs');
 const db = require('./Back-End/db.js');
 
+const favicon = require('serve-favicon');
 
 const app = express(); // Crée l’application serveur
+
+// Pour le logo de site
+app.use(favicon(path.join(__dirname, 'Front-End/IMAGES/Icons_site/logo.ico')));
+
+// Autoriser le front-end à communiquer
 app.use(cors({
   origin: true, 
   credentials: true

@@ -40,7 +40,7 @@ app.use(session({
 app.use("/CSS", express.static(path.join(__dirname, "Front-End/CSS")));
 app.use("/JS", express.static(path.join(__dirname, "Front-End/JS")));
 app.use("/IMAGES", express.static(path.join(__dirname, "Front-End/IMAGES")));
-app.use(express.static(path.join(__dirname, "Front-End/HTML")));
+app.use("/HTML", express.static(path.join(__dirname, "Front-End/HTML")));
 
 // Route pour l'accueil
 app.get("/", (req, res) => {

@@ -26,7 +26,7 @@
 // Bouton de redirection -> formulaire de creation d'evenement
 
 document.getElementById("btnCreer").addEventListener("click", () => {
-    window.location.href = "../Header/Events/formulaire_creation_events.html";
+    window.location.href = "/Header/Events/formulaire_creation_events.html";
 });
 
  document.querySelectorAll(".filtre").forEach(filtre => {

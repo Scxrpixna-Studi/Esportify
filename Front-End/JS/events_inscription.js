@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     // Récupérer les événements validés
-    const res = await fetch("http://127.0.0.1:3000/users/events_en_cours", {
+    const res = await fetch("/users/events_en_cours", {
       credentials: "include"
     });
     console.log(res.status, res.headers.get("content-type"));
    const text = await res.text();
 
-    const resUser = await fetch("http://127.0.0.1:3000/users/me", {
+    const resUser = await fetch("/users/me", {
           credentials: "include"
       });
 
@@ -72,7 +72,7 @@ const data = JSON.parse(text);
         <div class="fondArticles">
           <div class="imgJeuFond" style="background-image: url(../../../IMAGES/${fondJeu}.jpg);">
             <div class="fondNoir">
-              <img class="logoJeu" src="../../../IMAGES/${logoJeu}.jpg" alt="logo ${demande.jeu}">
+              <img class="logoJeu" src="/IMAGES/${logoJeu}.jpg" alt="logo ${demande.jeu}">
               <p class="paraJeu">${demande.jeu}</p>
             </div>
           </div>
@@ -82,29 +82,29 @@ const data = JSON.parse(text);
             <p class="desc">${demande.description}</p>
 
             <div class="boiteHoraire">
-              <img class="imgCalendrier" src="../../../IMAGES/Icons_site/Calendrier.png" alt="calendrier">
+              <img class="imgCalendrier" src="/IMAGES/Icons_site/Calendrier.png" alt="calendrier">
               <p class="info">Du ${dateFormate(demande.date_debut)} à ${heureFormate(demande.heure_debut)}</p>
             </div>
 
             <div class="boiteHoraire">
-              <img class="imgCalendrier" src="../../../IMAGES/Icons_site/Calendrier.png" alt="calendrier">
+              <img class="imgCalendrier" src="/IMAGES/Icons_site/Calendrier.png" alt="calendrier">
               <p class="info">Au ${dateFormate(demande.date_fin)} à ${heureFormate(demande.heure_fin)}</p>
             </div>
 
             <div class="boiteRecompense">
-              <img class="imgRecompense" src="../../../IMAGES/Icons_site/Récompense.png" alt="récompense">
+              <img class="imgRecompense" src="/IMAGES/Icons_site/Récompense.png" alt="récompense">
               <p class="info">${demande.recompense}</p>
             </div>
 
             <div class="boiteParticipantMin">
-                <img class="imgJoueur" src="../../../IMAGES/Icons_site/perso gameur.png" alt="joueurs">
+                <img class="imgJoueur" src="/IMAGES/Icons_site/perso gameur.png" alt="joueurs">
                 <p class="info">Participants minimum : ${demande.participants}</p>
             </div>
 
             <div class="footerArticle">
                 <p class="organisateur"><em>Proposé par <strong>${user.pseudo}</strong></em></p>
                     <div class="participant">
-                        <img class="imgParticipant" src="../../../IMAGES/Icons_site/perso gameur.png" alt="participants">
+                        <img class="imgParticipant" src="/IMAGES/Icons_site/perso gameur.png" alt="participants">
                         <p>${demande.NbrParticipants}</p>
                     </div>
             </div>

@@ -13,13 +13,13 @@ function showAlert(msg, isError = false) {
     // Style selon type
     if (isError) {
         titre.textContent = `Envoi Impossible`;
-        img.src = "../../IMAGES/logo.png";
+        img.src = "/IMAGES/logo.png";
         para.style.color = "white";
         para.style.fontWeight = "bold";
         console.log("Message :", msg, "Erreur :", isError)
     } else {
         titre.textContent = `Envoi effectué`;
-        img.src = "../../IMAGES/logo.png";
+        img.src = "/IMAGES/logo.png";
         para.style.color = "white";
         para.style.fontWeight = "normal";
     }
@@ -37,7 +37,7 @@ form.addEventListener("submit", async function(e) {
     const message = document.getElementById('message').value;
 
     // Vérifier connexion
-    const resUser = await fetch("http://127.0.0.1:3000/users/me", {
+    const resUser = await fetch("/users/me", {
         credentials: "include"
     });
 
@@ -57,7 +57,7 @@ form.addEventListener("submit", async function(e) {
      // ENVOI AU SERVEUR
     try {
 
-        const res = await fetch("http://127.0.0.1:3000/users/contact", {
+        const res = await fetch("/users/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url(../../../IMAGES/fond.png);
+    background-image: url(/IMAGES/fond.png);
     background-size: cover;
     color:white;
 
@@ -125,7 +125,7 @@ body {
         .profil-container {
             width: 100vw;
             height: auto;
-            background-image: url(../../../IMAGES/fond_test.png);
+            background-image: url(/IMAGES/fond_test.png);
             background-size: cover;
             
 
@@ -179,7 +179,7 @@ body {
             width: 30px;
             height: 30px;
             background-color: transparent;
-            background-image: url("../../../IMAGES/Icons_site/deco.png");
+            background-image: url("/IMAGES/Icons_site/deco.png");
             background-size: cover;
 
             border: none;

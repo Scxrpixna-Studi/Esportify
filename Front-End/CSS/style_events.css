@@ -48,7 +48,7 @@
             .imgFond, .imgJeuFond {
                 width: 100%;
                 height: 120px;
-                background-image: url(../IMAGES/fond_event_vide.png);
+                background-image: url(/IMAGES/fond_event_vide.png);
                 background-size: cover;
 
                 border-radius: 10px;

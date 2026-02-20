@@ -1,7 +1,7 @@
 
 // Gère la connexion sur le site 
 
-  fetch("http://127.0.0.1:3000/users/me", {
+  fetch("/users/me", {
     credentials: "include" // Obligatoire sinon les cookies de sessions ne seront pas envoyés, donc pas de session reconnue côté serveur
   })
     .then(res => res.json())
@@ -54,7 +54,7 @@
         <div id="boiteLiensMenu">
           <div class="boiteLiensM">
             <ul class="mesEventsLiens" id="colorJoueur">
-                <li><a class="liensGlobal" href="/HTML/Header/Profil/demande_events.html">Mes Évènements</a></li>
+                <li><a class="liensGlobal" href="/Header/Profil/demande_events.html">Mes Évènements</a></li>
                 <li><a class="liensGlobal" href="">Historique</a></li>
                 <li><a class="liensGlobal" href="">Favoris</a></li>
             </ul>
@@ -82,14 +82,14 @@
         <div id="boiteLiensMenu">
           <div class="boiteLiensM">
             <ul class="mesEventsLiens" id="colorJoueur">
-                <li><a class="liensGlobal" href="/HTML/Header/Profil/demande_events.html">Demandes d'événements</a></li>
+                <li><a class="liensGlobal" href="/Header/Profil/demande_events.html">Demandes d'événements</a></li>
                 <li><a class="liensGlobal" href="">Historique</a></li>
                 <li><a class="liensGlobal" href="">Favoris</a></li>
             </ul>
           <br>
             <ul class="mesEventsLiens" id="colorOrganisateur"  style="--menu-color: 180, 159, 255">
-                <li><a class="liensGlobal" href="/HTML/Header/Profil/gerer_events.html">Gérer un Event</a></li>
-                <li><a class="liensGlobal" href="/HTML/Header/Events/gerer_users.html">Gérer un Utilisateur</a></li>
+                <li><a class="liensGlobal" href="/Header/Profil/gerer_events.html">Gérer un Event</a></li>
+                <li><a class="liensGlobal" href="/Header/Events/gerer_users.html">Gérer un Utilisateur</a></li>
             </ul>
 
           </div>
@@ -118,14 +118,14 @@
 
           <div class="boiteLiensM"> 
               <ul class="mesEventsLiens" id="colorJoueur">
-                  <li><a class="liensGlobal" href=/HTML/Header/Profil/demande_events.html">Demandes d'événements</a></li>
+                  <li><a class="liensGlobal" href=/Header/Profil/demande_events.html">Demandes d'événements</a></li>
                   <li><a class="liensGlobal" href="">Historique</a></li>
                   <li><a class="liensGlobal" href="">Favoris</a></li> 
               </ul>
             <br>
 
             <ul class="mesEventsLiens" id="colorOrganisateur"  style="--menu-color: 180, 159, 255">
-                <li><a class="liensGlobal" href="/HTML/Header/Profil/gerer_events.html">Gérer un Event</a></li>
+                <li><a class="liensGlobal" href="/Header/Profil/gerer_events.html">Gérer un Event</a></li>
                 <li><a class="liensGlobal" href="">Gérer un Utilisateur</a></li>
             </ul>
             <br>
@@ -149,7 +149,7 @@
 // Gère la déconnexion sur le site
  document.addEventListener("click", (e) => {
   if (e.target.id === "deconnection") {
-    fetch("http://127.0.0.1:3000/users/logout", {
+    fetch("/users/logout", {
       method: "POST",
       credentials: "include"
     })

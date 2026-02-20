@@ -22,7 +22,7 @@
         width: 100%;
         height: auto;
         
-        background-image: url('../../../IMAGES/fond_demande_events.png');
+        background-image: url('/IMAGES/fond_demande_events.png');
         background-size: cover;
         
         text-align: center;

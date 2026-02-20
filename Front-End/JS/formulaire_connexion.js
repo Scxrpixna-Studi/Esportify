@@ -53,8 +53,8 @@
         mdp.type = isPassword ? "text" : "password";
 
         oeilMdp.src = isPassword
-            ? "../../IMAGES/Icons_site/Oeil ouvert.png"
-            : "../../IMAGES/Icons_site/Oeil fermé.png";
+            ? "/IMAGES/Icons_site/Oeil ouvert.png"
+            : "/IMAGES/Icons_site/Oeil fermé.png";
     });
 
 
@@ -75,13 +75,13 @@ function showAlert(message, isError = false) {
     // Style selon type
     if (isError) {
         titre.textContent = `${etat} Impossible`;
-        img.src = "../../IMAGES/logo.png";
+        img.src = "/IMAGES/logo.png";
         para.style.color = "white";
         para.style.fontWeight = "bold";
         console.log("Message :", message, "Erreur :", isError)
     } else {
         titre.textContent = `${etat} à Esportify`;
-        img.src = "../../IMAGES/logo.png";
+        img.src = "/IMAGES/logo.png";
         para.style.color = "white";
         para.style.fontWeight = "normal";
     }
@@ -122,8 +122,8 @@ document.querySelector("#formulaireConnexion").addEventListener("submit", async 
     }
 
     const endpoint = isRegister
-        ? "http://127.0.0.1:3000/users/register"
-        : "http://127.0.0.1:3000/users/login";
+        ? "/users/register"
+        : "/users/login";
 
     const payload = isRegister ? { pseudo, email, mdp } : { email, mdp };
 

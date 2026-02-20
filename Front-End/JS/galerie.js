@@ -1,10 +1,10 @@
 const images = [
     
-    "../IMAGES/img1.png",
-    "../IMAGES/img2.png",
-    "../IMAGES/img3.png",
-    "../IMAGES/img4.png",
-    "../IMAGES/img5.png"
+    "/IMAGES/img1.png",
+    "/IMAGES/img2.png",
+    "/IMAGES/img3.png",
+    "/IMAGES/img4.png",
+    "/IMAGES/img5.png"
 ];
 
 const listeGalerie = document.getElementById('listeGalerie');

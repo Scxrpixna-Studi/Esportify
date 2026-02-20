@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
 
-    const res = await fetch("http://127.0.0.1:3000/users/mes_demandes", {
+    const res = await fetch("/users/mes_demandes", {
       credentials: "include"
     });
 
-    const resUser = await fetch("http://127.0.0.1:3000/users/me", {
+    const resUser = await fetch("/users/me", {
       credentials: "include"
     });
 
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         <div class="fondArticles">
           <div class="imgJeuFond" style="background-image: url(../../../IMAGES/${fondJeu}.jpg);">
             <div class="fondNoir">
-              <img class="logoJeu" src="../../../IMAGES/${logoJeu}.jpg" alt="logo rl">
+              <img class="logoJeu" src="/IMAGES/${logoJeu}.jpg" alt="logo rl">
               <p class="paraJeu">${demande.jeu}</p>
             </div>
           </div>
@@ -79,20 +79,20 @@ document.addEventListener("DOMContentLoaded", async () => {
             <p class="titreEvent">${demande.titre}</p>
             <p class="desc">${demande.description}</p>
             <div class="boiteHoraire">
-              <img class="imgCalendrier" src="../../../IMAGES/Icons_site/Calendrier.png" alt="calendrier">
+              <img class="imgCalendrier" src="/IMAGES/Icons_site/Calendrier.png" alt="calendrier">
               <p class="info">Du ${dateFormate(demande.date_debut)} à ${heureFormate(demande.heure_debut)}</p>
             </div>
             <div class="boiteHoraire">
-              <img class="imgCalendrier" src="../../../IMAGES/Icons_site/Calendrier.png" alt="calendrier">
+              <img class="imgCalendrier" src="/IMAGES/Icons_site/Calendrier.png" alt="calendrier">
               <p class="info">Au ${dateFormate(demande.date_fin)} à ${heureFormate(demande.heure_fin)}</p>
             </div>
             <div class="boiteRecompense">
-              <img class="imgRecompense" src="../../../IMAGES/Icons_site/Récompense.png" alt="récompense">
+              <img class="imgRecompense" src="/IMAGES/Icons_site/Récompense.png" alt="récompense">
               <p class="info">${demande.recompense}</p>
             </div>
         
             <div class="boiteParticipantMin">
-                <img class="imgJoueur" src="../../../IMAGES/Icons_site/perso gameur.png" alt="joueurs">
+                <img class="imgJoueur" src="/IMAGES/Icons_site/perso gameur.png" alt="joueurs">
                 <p class="info">Participants minimum : ${demande.participants}</p>
             </div>
 
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <p class="organisateur"><em>Validé par <strong>${user.pseudo}</strong></em></p>
               </div>
                     <div class="participant">
-                        <img class="imgParticipant" src="../../../IMAGES/Icons_site/perso gameur.png" alt="participants">
+                        <img class="imgParticipant" src="/IMAGES/Icons_site/perso gameur.png" alt="participants">
                         <p>${demande.NbrParticipants}</p>
                     </div>
             </div>
@@ -174,7 +174,7 @@ async function gererValidation(article, demande) {
   else colorJeu = "rgb(187, 0, 255)";
 
   try {
-    const res = await fetch("http://127.0.0.1:3000/users/valider_demande", {
+    const res = await fetch("/users/valider_demande", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include",

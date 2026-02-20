@@ -35,13 +35,13 @@
       // Style selon type
       if (isError) {
           titre.textContent = `Création Impossible`;
-          img.src = "../../../IMAGES/logo.png";
+          img.src = "/IMAGES/logo.png";
           para.style.color = "white";
           para.style.fontWeight = "bold";
           console.log("Message :", msg, "Erreur :", isError)
       } else {
           titre.textContent = `Demande de création envoyé`;
-          img.src = "../../../IMAGES/logo.png";
+          img.src = "/IMAGES/logo.png";
           para.style.color = "white";
           para.style.fontWeight = "normal";
       }
@@ -70,7 +70,7 @@
       const NbrParticipants = "0";
 
       // Vérifier connexion
-      const resUser = await fetch("http://127.0.0.1:3000/users/me", {
+      const resUser = await fetch("/users/me", {
           credentials: "include"
       });
 
@@ -85,7 +85,7 @@
       // ENVOI AU SERVEUR
       try {
 
-          const res = await fetch("http://127.0.0.1:3000/users/creation_events", {
+          const res = await fetch("/users/creation_events", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"

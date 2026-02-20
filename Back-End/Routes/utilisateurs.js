@@ -38,7 +38,7 @@ function escapeHTML(str) {
     });
 
     async function sendVerificationEmail(mail, token, pseudo) {
-        const url = `http://127.0.0.1:3000/users/verify-email?token=${token}`;
+        const url = `/users/verify-email?token=${token}`;
 
         await transporter.sendMail({
             from: `"Esportify" <${process.env.ADRESSE_GMAIL_SITE}>`,

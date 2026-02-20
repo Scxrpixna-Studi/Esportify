@@ -142,10 +142,10 @@ document.querySelector("#formulaireConnexion").addEventListener("submit", async 
             showAlert(result.message, false);
 
             if (isRegister) {
-                 setTimeout(() => window.location.href = "/HTML/Header/connexion.html", 2000);
+                 setTimeout(() => window.location.href = "/Header/connexion.html", 2000);
                  
         } else {
-            setTimeout(() => window.location.href = "/HTML/accueil.html", 100);
+            setTimeout(() => window.location.href = "/index.html", 100);
               
         }
 

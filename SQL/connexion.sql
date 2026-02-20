@@ -5,7 +5,7 @@ CREATE TABLE utilisateurs (
     id INT AUTO_INCREMENT PRIMARY KEY,
     pseudo VARCHAR(25) NOT NULL UNIQUE,
     mail VARCHAR(255) NOT NULL UNIQUE,
-    pdp VARCHAR(255) DEFAULT '../../IMAGES/Icons_site/profil.png',
+    pdp VARCHAR(255) DEFAULT '/IMAGES/Icons_site/profil.png',
     mdp VARCHAR(255) NOT NULL,
     role ENUM('Visiteur', 'Joueur', 'Organisateur', 'Administrateur') DEFAULT 'Visiteur',
     inscription TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -24,9 +24,6 @@ CREATE TABLE demandes_events (
   date_fin DATE,
   heure_fin TIME,
   recompense VARCHAR(255),
-  img1 TEXT,
-  img2 TEXT,
-  img3 TEXT,
   statut ENUM('En attente', 'Validé', 'Refusé') DEFAULT 'En attente',
   date_creation TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES utilisateurs(id)

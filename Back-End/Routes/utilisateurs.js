@@ -58,21 +58,21 @@ function escapeHTML(str) {
   router.get("/verify-email", (req, res) => {
     const token = req.query.token;
 
-    if (!token) return res.redirect("/Hors/email_verified.html?status=token-invalide");
+    if (!token) return res.redirect("/Header/email_verified.html?status=token-invalide");
 
     db.query(
         "SELECT inscription FROM utilisateurs WHERE email_token = ?",
         [token],
         (err, results) => {
-            if (err) return res.redirect("/Hors/email_verified.html?status=erreur");
-            if (results.length === 0) return res.redirect("/Hors/email_verified.html?status=token-invalide");
+            if (err) return res.redirect("/Header/email_verified.html?status=erreur");
+            if (results.length === 0) return res.redirect("/Header/email_verified.html?status=token-invalide");
 
             const inscriptionDate = results[0].inscription;
             const now = new Date();
             if (now - new Date(inscriptionDate) > 15 * 60 * 1000) {
                 // Supprime le compte expiré
                 db.query("DELETE FROM utilisateurs WHERE email_token = ?", [token]);
-                return res.redirect("/Hors/email_verified.html?status=token-expire");
+                return res.redirect("/Header/email_verified.html?status=token-expire");
             }
 
             // Sinon, tout est OK
@@ -81,8 +81,8 @@ function escapeHTML(str) {
                 [token],
                 (err2, result) => {
                     if (err2 || result.affectedRows === 0)
-                        return res.redirect("/Hors/email_verified.html?status=erreur");
-                    return res.redirect("/Hors/email_verified.html?status=email-verified");
+                        return res.redirect("/Header/email_verified.html?status=erreur");
+                    return res.redirect("/Header/email_verified.html?status=email-verified");
                 }
             );
         }

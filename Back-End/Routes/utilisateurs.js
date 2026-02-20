@@ -38,7 +38,8 @@ function escapeHTML(str) {
     });
 
     async function sendVerificationEmail(mail, token, pseudo) {
-        const url = `/users/verify-email?token=${token}`;
+      const baseUrl = process.env.BASE_URL;
+      const url = `${baseUrl}/users/verify-email?token=${token}`;
 
         await transporter.sendMail({
             from: `"Esportify" <${process.env.ADRESSE_GMAIL_SITE}>`,

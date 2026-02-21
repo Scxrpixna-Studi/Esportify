@@ -62,16 +62,56 @@ Des événements dédiés aux compétitions de divers jeux vidéos sont organis�
 
 ## Installation et Dépendances
 
-### 1. Initialisation du projet Node.js
-Pour créer le projet Node.js et installer les dépendances, exécutez :
+### 1. Clonage du projet
 
 ```bash
-npm init -y
-npm install express express-session cors path dotenv mysql2
+git clone https://github.com/Scxrpixna-Studi/Esportify.git
+cd Esportify
 
 ```
 
-### 2. Justification des Installations
+### 2. Installation des dépendances
+Pour créer le projet Node.js et installer les dépendances, exécutez :
+
+```bash
+npm install
+
+```
+
+### 3. Configuration du fichier .env
+Créer un fichier .env à la racine du projet avec le contenu suivant :
+
+ADRESSE_GMAIL_SITE=adresse_mail_du_site_web
+MDP_GMAIL=votre_mot_de_passe_app
+
+SESSION_SECRET=une_cle_secrete
+
+ID_DB_HOST=localhost
+ID_DB_USER=root
+MDP_DB=mot_de_passe
+DB_NAME=pandora_esportify
+
+BASE_URL=http://localhost:3000
+
+
+### 4. Importation de la base de données
+```Markdown
+MySQL version 8.x recommandée.
+
+```
+Ouvrir MySQL et créer la base de données :
+
+```SQL
+CREATE DATABASE pandora_esportify
+
+```
+puis importez le fichier situé dans le dossier SQL/ :
+
+```bash
+mysql -u root -p pandora_esportify < SQL/connexion.sql
+```
+
+### 5. Justification des Installations
 
 - `express` → Framework pour gérer le serveur et les routes HTTP.
 
@@ -85,15 +125,7 @@ npm install express express-session cors path dotenv mysql2
 
 - `mysql2` → Connexion et requêtes vers la base de données MySQL.
 
-
-### 3. Configuration de la Base de Données
-
-MySQL (version 12 ou supérieure recommandée) pour créer et gérer la base pandora_esportify.
-
-Importer le fichier SQL/connexion.sql pour créer les tables et relations.
-
-
-### 4. Lancement du Serveur
+### 6. Lancement du Serveur
 
 ```bash
 node index.js
@@ -110,3 +142,46 @@ Le serveur est accessible sur http://127.0.0.1:3000.
 - Validation des demandes d’événements
 - Interface responsive pour le front-end
 - Connexion et inscription sécurisées
+
+---
+
+## Workflow Git et Bonnes Pratiques
+
+Le projet suit un workflow Git structuré pour séparer le code stable du développement :
+
+- **main** → branche principale, version stable déployable
+- **develop** → branche de développement pour tester les fonctionnalités
+- **feature/** → chaque nouvelle fonctionnalité est développée dans une branche dédiée
+
+### Exemple de branches
+
+- `feature/authentification`
+- `feature/gestion-evenements`
+- `feature/structure-initiale`
+
+### Processus de travail
+
+1. Créer une branche fonctionnalité depuis `develop` :
+
+```bash
+   git checkout develop
+   git checkout -b feature/ma-feature
+
+```
+
+2. Développer et tester la fonctionnalité sur cette branche
+
+Merge de la branche feature vers develop :
+
+```bash
+git checkout develop
+git merge feature/ma-feature
+```
+
+3. Une fois que develop est stable et testé, merge vers main :
+
+```bash
+git checkout main
+git merge develop
+```
+Le fichier .env et le dossier node_modules/ sont ignorés via .gitignore.

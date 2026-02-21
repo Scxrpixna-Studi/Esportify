@@ -142,3 +142,46 @@ Le serveur est accessible sur http://127.0.0.1:3000.
 - Validation des demandes d’événements
 - Interface responsive pour le front-end
 - Connexion et inscription sécurisées
+
+---
+
+## Workflow Git et Bonnes Pratiques
+
+Le projet suit un workflow Git structuré pour séparer le code stable du développement :
+
+- **main** → branche principale, version stable déployable
+- **develop** → branche de développement pour tester les fonctionnalités
+- **feature/** → chaque nouvelle fonctionnalité est développée dans une branche dédiée
+
+### Exemple de branches
+
+- `feature/authentification`
+- `feature/gestion-evenements`
+- `feature/structure-initiale`
+
+### Processus de travail
+
+1. Créer une branche fonctionnalité depuis `develop` :
+
+```bash
+   git checkout develop
+   git checkout -b feature/ma-feature
+
+```
+
+2. Développer et tester la fonctionnalité sur cette branche
+
+Merge de la branche feature vers develop :
+
+```bash
+git checkout develop
+git merge feature/ma-feature
+```
+
+3. Une fois que develop est stable et testé, merge vers main :
+
+```bash
+git checkout main
+git merge develop
+```
+Le fichier .env et le dossier node_modules/ sont ignorés via .gitignore.

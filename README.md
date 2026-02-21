@@ -43,7 +43,7 @@ Des événements dédiés aux compétitions de divers jeux vidéos sont organis�
 ## Organisation du Projet
 
 ### Front-End
-- `HTML/`, `CSS/`, `JS/`, `IMAGES/` → Dossiers et fichiers du front-end.
+- `Front-End` → Dossier contenant l'intégralité des dossiers `HTML/`, `CSS/`, `JS/`, `IMAGES/` et fichiers du front-end.
 - `index.js` → Script principal du front-end.
 - `gestion_connexion_accueil.js` → Script de gestion de la connexion générale côté front.
 
@@ -57,6 +57,19 @@ Des événements dédiés aux compétitions de divers jeux vidéos sont organis�
 
 ### Autres
 - `README.md` → Fichier de documentation du projet.
+
+---
+
+## Base de Données
+
+### Base de données
+- `SQL/creation.sql` → création des tables de la base `pandora_esportify`
+- `SQL/data.sql` → données de test (fixtures) pour vérifier les fonctionnalités
+
+#### Importation
+1. Ouvrir MySQL ou phpMyAdmin
+2. Exécuter `SQL/creation.sql` pour créer la base et les tables
+3. Exécuter `SQL/data.sql` pour insérer les données de test
 
 ---
 
@@ -108,7 +121,8 @@ CREATE DATABASE pandora_esportify
 puis importez le fichier situé dans le dossier SQL/ :
 
 ```bash
-mysql -u root -p pandora_esportify < SQL/connexion.sql
+mysql -u root -p pandora_esportify < SQL/creation.sql
+mysql -u root -p pandora_esportify < SQL/data.sql
 ```
 
 ### 5. Justification des Installations

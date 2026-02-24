@@ -24,8 +24,22 @@ app.use(cors({
 app.use(express.json()); // Permet de lire du JSON (utile pour POST plus tard)
 
 const session = require("express-session");
+const MySQLStore = require("express-mysql-session")(session);
+const dbConfig = {
+  host: process.env.ID_DB_HOST,
+  user: process.env.ID_DB_USER,
+  password: process.env.MDP_DB,
+  database: process.env.DB_NAME
+};
+
+const sessionStore = new MySQLStore(dbConfig);
+
+app.set("trust proxy", 1); // nécessaire derrière HTTPS / proxy
+
 app.use(session({
+  key: "esportify.sid",
   secret: process.env.SESSION_SECRET,
+  store: sessionStore,
   resave: false,
   saveUninitialized: false,
   cookie: {

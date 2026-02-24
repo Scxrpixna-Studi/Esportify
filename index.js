@@ -44,7 +44,7 @@ app.use(session({
   saveUninitialized: false,
   cookie: {
     httpOnly: true,
-    secure: true, // IMPORTANT en HTTPS
+    secure: false, // IMPORTANT en HTTPS
     sameSite: "lax"
   }
 }));

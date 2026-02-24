@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../db");
+console.log("DB importée :", !!db);
 const bcrypt = require("bcrypt");
 
  

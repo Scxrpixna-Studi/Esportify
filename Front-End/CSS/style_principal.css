@@ -113,6 +113,7 @@ body {
         }
 
         .profil-container {
+            display: flex;
             width: 100vw;
             height: auto;
             background-image: url(/IMAGES/fond_test.png);

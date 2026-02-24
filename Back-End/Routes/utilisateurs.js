@@ -241,6 +241,7 @@ router.post("/login", (req, res) => {
 
 // GET USER CONNECTÉ
   router.get("/me", (req, res) => {
+    console.log("SESSION:", req.session);
 
     if (!req.session.userId) {
       return res.json({ connected: false });

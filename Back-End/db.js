@@ -8,7 +8,6 @@
     user: process.env.ID_DB_USER,
     password: process.env.MDP_DB,
     database: process.env.DB_NAME,
-    port: 3306
     });
 
     db.connect(err => {
